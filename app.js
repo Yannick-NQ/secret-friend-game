@@ -3,6 +3,12 @@ const participantsList = document.getElementById('participants-list');
 
 let amigos = [];
 
+input.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        agregarAmigo();
+    }
+})
+
 function renderizarAmigo(name) {
     const card = document.createElement('div');
 
