@@ -67,7 +67,7 @@ function eliminarAmigo(name) {
 
 
 function agregarAmigo() {
-    const nombres = input.value.split(',').map(nombre => nombre.trim()).filter(nombre => nombre !== '');
+    const nombres = input.value.split(',').map(nombre => nombre.toLowerCase().trim()).filter(nombre => nombre !== '');
     if (nombres.length === 0) {
         alert('Debes de ingresar al menos un nombre');
         return;
