@@ -10,10 +10,33 @@
   <body>
     <div class="container">
       <!-- Left Section - Input -->
-      <div class="main__container">Formulario</div>
+      <div class="main__container">
+        <div class="form__container">
+          <div class="form__logo">
+            <img src="assets/images/diamond-logo.png" alt="Logo" />
+            <h1 class="form__title">Amigo Secreto</h1>
+          </div>
+          <div class="form__input-group">
+            <input
+              type="text"
+              id="input-friends"
+              placeholder="Nombre o nombres separados por coma"
+              required
+            />
+            <button class="form__btn-add" onclick="agregarAmigo()">
+              Añadir
+            </button>
+          </div>
+          <div class="form__action">
+            <button class="form__btn-sort" onclick="sortearAmigo()">
+              Sortear
+            </button>
+          </div>
+        </div>
+      </div>
       <!-- Right Section - Participants -->
       <div class="participants__container" id="participants-list">
-        Partipantes
+        Participantes
       </div>
     </div>
 

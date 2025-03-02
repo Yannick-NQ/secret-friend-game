@@ -79,3 +79,93 @@ body::before {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+.form__container {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form__logo img {
+  width: 60px;
+  height: auto;
+}
+
+.form__title {
+  font-family: 'DragonHunter', Arial, sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  color: var(--dark-color);
+  margin: 0;
+  letter-spacing: 0.4rem;
+  overflow: hidden;
+}
+
+.form__input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form__input-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form__btn-add {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.form__btn-add:hover {
+  background-color: #006bb3;
+}
+
+.form__action {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form__btn-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--dark-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.form__btn-sort:hover {
+  background-color: var(--primary-color);
+}
