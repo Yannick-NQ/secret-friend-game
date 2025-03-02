@@ -1,5 +1,49 @@
 let amigos = [];
 
+function renderizarAmigo(name) {
+    const card = document.createElement('div');
+
+    card.classList.add('card');
+    card.setAttribute('data-name', name);
+
+    card.innerHTML = `
+        <div class="card__body">
+            <div class="card__icon">
+              <img src="assets/images/mi-logo.png" alt="Participant Logo" />
+            </div>
+
+            <p class="card__title">${name}</p>
+          </div>
+          <div class="card__ribbon">
+            <button class="card__ribbon-delete-icon" id="btn-delete-participant">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m13.5.5l-13 13m0-13l13 13"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+        </div>
+    `;
+
+    const deleteButton = card.querySelector('#btn-delete-participant');
+    deleteButton.addEventListener('click', function () {
+        eliminarAmigo(name);
+    });
+
+    participantsList.appendChild(card);
+}
+
+
 function agregarAmigo() {
     const input = document.getElementById('amigo');
 
