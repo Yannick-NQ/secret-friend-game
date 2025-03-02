@@ -1,3 +1,6 @@
+const input = document.getElementById('input-friends');
+const participantsList = document.getElementById('participants-list');
+
 let amigos = [];
 
 function renderizarAmigo(name) {
@@ -58,20 +61,34 @@ function eliminarAmigo(name) {
 
 
 function agregarAmigo() {
-    const input = document.getElementById('amigo');
-
-    const nombre = input.value.trim();
-
-    if (nombre === "") {
-        alert("Por favor, ingrese un nombre de amigo.");
+    const nombres = input.value.split(',').map(nombre => nombre.trim()).filter(nombre => nombre !== '');
+    if (nombres.length === 0) {
+        alert('Debes de ingresar al menos un nombre');
         return;
     }
 
-    amigos.push(nombre);
+    for (const nombre of nombres) {
+        if (amigos.includes(nombre)) {
+            alert(`El amigo ${nombre} ya está en la lista`);
+            continue;
+        }
 
-    actualizarLista();
+        if (/^\d/.test(nombre)) {
+            alert(`El nombre "${nombre}" no puede empezar con un número.`);
+            continue;
+        }
 
-    input.value = "";
+        if (nombre.length < 2) {
+            alert(`El nombre "${nombre}" es demasiado corto (mínimo 2 letras).`);
+            continue;
+        }
+
+        amigos.push(nombre);
+
+        renderizarAmigo(nombre);
+    }
+
+    input.value = '';
 }
 
 function actualizarLista() {
