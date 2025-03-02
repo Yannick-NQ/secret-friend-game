@@ -43,6 +43,19 @@ function renderizarAmigo(name) {
     participantsList.appendChild(card);
 }
 
+function eliminarAmigo(name) {
+
+    const index = amigos.indexOf(name);
+    if (index > -1) {
+        amigos.splice(index, 1);
+    }
+
+    const card = participantsList.querySelector(`.card[data-name="${name}"]`);
+    if (card) {
+        participantsList.removeChild(card);
+    }
+}
+
 
 function agregarAmigo() {
     const input = document.getElementById('amigo');
