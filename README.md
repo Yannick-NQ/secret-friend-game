@@ -1,10 +1,15 @@
 # Proyecto: Amigo Secreto - Sorteo de Amigos
 ![Challengue_secret](https://github.com/user-attachments/assets/956c20d0-c075-43b2-b284-fef97ec36b63)
+
+<p align="center">
+  <a href="https://yannick-nq.github.io/secret-friend-game/" target="_blank">Probar Ahora</a>
+</p>
+
 <div align="center" style="display: flex; gap: 15px; justify-content: center; align-items: center;">
-  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" width="auto" height="50"/>
-  <img src="https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white" width="auto" height="50"/>
-  <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black" width="auto" height="50"/>
-  <img src="https://img.shields.io/badge/SVG-%23FFB13B.svg?style=flat&logo=svg&logoColor=black" width="auto" height="50"/>
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" width="auto" height="20"/>
+  <img src="https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white" width="auto" height="20"/>
+  <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black" width="auto" height="20"/>
+  <img src="https://img.shields.io/badge/SVG-%23FFB13B.svg?style=flat&logo=svg&logoColor=black" width="auto" height="20"/>
 </div>
 
 
