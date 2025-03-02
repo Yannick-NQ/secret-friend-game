@@ -43,3 +43,8 @@ function sortearAmigo() {
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = `<li>El amigo secreto es: <strong>${amigoSorteado}</strong></li> `
 }
+
+
+function closeModalGanador() {
+    document.getElementById('modal-ganador').style.display = 'none';
+}
