@@ -145,6 +145,12 @@ body::before {
   background-color: #006bb3;
 }
 
+.form__btn-add > svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
 .form__action {
   display: flex;
   justify-content: center;
@@ -168,4 +174,10 @@ body::before {
 
 .form__btn-sort:hover {
   background-color: var(--primary-color);
+}
+
+.form__btn-sort > svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
 }
