@@ -3,6 +3,12 @@ const participantsList = document.getElementById('participants-list');
 
 let amigos = [];
 
+input.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        agregarAmigo();
+    }
+})
+
 function renderizarAmigo(name) {
     const card = document.createElement('div');
 
@@ -91,31 +97,40 @@ function agregarAmigo() {
     input.value = '';
 }
 
-function actualizarLista() {
-    const lista = document.getElementById('listaAmigos');
-    lista.innerHTML = "";
-
-    for (let i = 0; i < amigos.length; i++) {
-        const li = document.createElement('li');
-        li.textContent = amigos[i];
-        lista.appendChild(li);
-    }
-}
 
 function sortearAmigo() {
     if (amigos.length === 0) {
-        alert("No hay nombres en la lista para sortear");
+        alert('No hay amigos en la lista para sortear');
         return;
     }
 
-    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
-    const amigoSorteado = amigos[indiceAleatorio];
+    const cards = document.querySelectorAll('.card');
 
+    cards.forEach(card => {
+        card.style.animationPlayState = 'paused';
+    });
 
-    actualizarLista();
+    cards.forEach(card => {
+        card.style.animation = 'vibrate 0.2s linear infinite';
+    });
 
-    const resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<li>El amigo secreto es: <strong>${amigoSorteado}</strong></li> `
+    setTimeout(function () {
+
+        const ganador = amigos[Math.floor(Math.random() * amigos.length)];
+
+        document.getElementById('ganador-nombre').textContent = ganador;
+        document.getElementById('modal-ganador').style.display = 'flex';
+
+        cards.forEach(card => {
+            card.style.animation = 'none';
+        });
+
+        cards.forEach(card => {
+            card.style.animation = 'bounce 2s ease-in-out infinite';
+            card.style.animationPlayState = 'running';
+        });
+
+    }, 1000);
 }
 
 
