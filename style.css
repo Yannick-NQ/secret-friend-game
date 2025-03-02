@@ -181,3 +181,27 @@ body::before {
   height: 20px;
   fill: white;
 }
+
+.form__instructions {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.form__instructions h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  color: var(--dark-color);
+}
+
+.form__instructions ul {
+  padding-left: 1rem;
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.form__instructions li {
+  margin-bottom: 4px;
+}
